@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+        <div class="current-wins">
+          <h2 class="wins name">Wins</h2>
+          <p class="current-win wins--0 name">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+        <div class="current-wins">
+          <h2 class="wins name">Wins</h2>
+          <p class="current-win wins--1 name">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <button class="btn btn--rules">🤓 Game rules</button>
+
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h2 class="game-rules">Game rules</h2>
+        <p class="rules-description">
+          Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+          <ul class="rules-description">
+            <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+            <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+            <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+          </ul>
+        </p>
+        <p class="rules-description">
+          The first player to score 100 or more points wins the round.
+          For example, the first player, Donald, begins a turn with a roll of 5. Donald could hold and score 5 points, but chooses to roll again. Donald rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Donald rolls a 1, and must end his turn without scoring. The next player, Alexis, rolls the sequence 4-5-3-5-5, after which she chooses to hold, and adds her turn total of 22 points to her score. <strong>The first player to win three rounds, wins the game!</strong>
+          
+        </p>
+      </div>
+      <div class="modal-overlay hidden"></div>
+    
+      
+      <script src="script.js"></script>
+    </body>
+    </html>
+    
